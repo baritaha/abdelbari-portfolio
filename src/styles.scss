@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+@use 'styles/variables' as *;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+}

@@ -15,8 +15,13 @@
         <a routerLink="/contact" class="btn btn-secondary">Contact Me</a>
 
         <div class="cv-dropdown">
-          <button class="btn btn-outline">Get My CV</button>
-          <div class="dropdown-menu">
+          <button
+            class="btn btn-outline"
+            (click)="toggleCv()">
+            Get My CV
+          </button>
+
+          <div class="dropdown-menu" [class.open]="isCvOpen">
             <a href="assets/cv/Abdelbari-Altaha-CV.pdf" target="_blank">
               View CV
             </a>
@@ -39,8 +44,9 @@
           <span class="dot green"></span>
         </div>
 
-        <!-- 🎥 TERMINAL VIDEO -->
+        <!-- TERMINAL VIDEO -->
         <video
+          #terminalVideo
           class="terminal-video"
           src="assets/video/v1.mp4"
           autoplay

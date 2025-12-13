@@ -17,7 +17,9 @@
   gap: 3rem;
 }
 
-/* Text */
+/* =========================
+   TEXT
+========================= */
 .hero-text h1 {
   font-size: 2.6rem;
   color: var(--primary-dark);
@@ -31,7 +33,9 @@
   color: #334155;
 }
 
-/* Actions */
+/* =========================
+   ACTION BUTTONS
+========================= */
 .actions {
   margin-top: 2rem;
   display: flex;
@@ -49,9 +53,11 @@
   align-items: center;
   justify-content: center;
   transition: all 0.25s ease;
+  cursor: pointer;
+  border: none;
 }
 
-/* Primary — main action */
+/* Primary — main CTA */
 .btn-primary {
   background: var(--primary-accent);
   color: #ffffff;
@@ -63,7 +69,7 @@
   transform: translateY(-2px);
 }
 
-/* Secondary — neutral navigation */
+/* Secondary — contact */
 .btn-secondary {
   background: var(--primary-dark);
   color: #ffffff;
@@ -86,7 +92,61 @@
   color: #ffffff;
 }
 
-/* Photo */
+/* =========================
+   CV DROPDOWN
+========================= */
+.cv-dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  position: absolute;
+  top: 115%;
+  left: 0;
+  min-width: 170px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.25s ease;
+  z-index: 20;
+}
+
+/* Dropdown links */
+.dropdown-menu a {
+  display: block;
+  padding: 0.8rem 1.1rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--primary-dark);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.dropdown-menu a:hover {
+  background: #f1f5f9;
+  color: var(--primary-accent);
+}
+
+/* Show dropdown on hover */
+.cv-dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* =========================
+   PHOTO
+========================= */
 .hero-photo {
   display: flex;
   justify-content: center;
@@ -101,12 +161,16 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
-/* Spacer */
+/* =========================
+   SPACER
+========================= */
 .spacer {
   height: 4rem;
 }
 
-/* About */
+/* =========================
+   ABOUT SECTION
+========================= */
 .about {
   max-width: 900px;
   margin: 0 auto;
@@ -124,7 +188,9 @@
   }
 }
 
-/* 📱 Mobile */
+/* =========================
+   MOBILE
+========================= */
 @media (max-width: 768px) {
   .hero-container {
     grid-template-columns: 1fr;
@@ -146,5 +212,15 @@
   .hero-photo img {
     width: 180px;
     height: 180px;
+  }
+
+  /* Center dropdown on mobile */
+  .dropdown-menu {
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+  }
+
+  .cv-dropdown:hover .dropdown-menu {
+    transform: translateX(-50%) translateY(0);
   }
 }

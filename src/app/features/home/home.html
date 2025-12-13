@@ -11,17 +11,33 @@
         user-centered solutions.
       </p>
 
-      <div class="actions">
-        <a routerLink="/projects" class="btn btn-primary">View Projects</a>
-        <a routerLink="/contact" class="btn btn-secondary">Contact Me</a>
-        <a
-          href="assets/cv/Abdelbari-Altaha-CV.pdf"
-          target="_blank"
-          class="btn btn-outline"
-        >
-          Get My CV
-        </a>
-      </div>
+     <div class="actions">
+  <a routerLink="/projects" class="btn btn-primary">View Projects</a>
+  <a routerLink="/contact" class="btn btn-secondary">Contact Me</a>
+
+  <div class="cv-dropdown">
+    <button class="btn btn-outline dropdown-toggle">
+      Get My CV
+    </button>
+
+    <div class="dropdown-menu">
+      <a
+        href="assets/cv/Abdelbari-Altaha-CV.pdf"
+        target="_blank"
+      >
+        View CV
+      </a>
+
+      <a
+        href="assets/cv/Abdelbari-Altaha-CV.pdf"
+        download
+      >
+        Download CV
+      </a>
+    </div>
+  </div>
+</div>
+
     </div>
 
     <!-- Photo -->

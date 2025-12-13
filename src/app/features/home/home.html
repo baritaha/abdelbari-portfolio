@@ -1,61 +1,67 @@
 <section class="hero">
   <div class="hero-container">
-    <!-- Text -->
+
+    <!-- LEFT -->
     <div class="hero-text">
       <h1>Full-Stack Web Developer</h1>
 
       <p>
-        I build production-ready web applications across the full stack, working
-        with modern frontend frameworks and robust backend technologies. I focus
-        on clean architecture, performance, and delivering maintainable,
-        user-centered solutions.
+        I build production-ready web applications across the full stack,
+        working with modern frontend frameworks and robust backend technologies.
       </p>
 
-     <div class="actions">
-  <a routerLink="/projects" class="btn btn-primary">View Projects</a>
-  <a routerLink="/contact" class="btn btn-secondary">Contact Me</a>
+      <div class="actions">
+        <a routerLink="/projects" class="btn btn-primary">View Projects</a>
+        <a routerLink="/contact" class="btn btn-secondary">Contact Me</a>
 
-  <div class="cv-dropdown">
-    <button class="btn btn-outline dropdown-toggle">
-      Get My CV
-    </button>
-
-    <div class="dropdown-menu">
-      <a
-        href="assets/cv/Abdelbari-Altaha-CV.pdf"
-        target="_blank"
-      >
-        View CV
-      </a>
-
-      <a
-        href="assets/cv/Abdelbari-Altaha-CV.pdf"
-        download
-      >
-        Download CV
-      </a>
-    </div>
-  </div>
-</div>
-
+        <div class="cv-dropdown">
+          <button class="btn btn-outline">Get My CV</button>
+          <div class="dropdown-menu">
+            <a href="assets/cv/Abdelbari-Altaha-CV.pdf" target="_blank">
+              View CV
+            </a>
+            <a href="assets/cv/Abdelbari-Altaha-CV.pdf" download>
+              Download CV
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <!-- Photo -->
-    <div class="hero-photo">
+    <!-- RIGHT -->
+    <div class="hero-media">
       <img src="assets/pic.jpeg" alt="Abdelbari profile photo" />
+
+      <div class="code-terminal">
+        <div class="terminal-header">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+        </div>
+
+        <!-- 🎥 TERMINAL VIDEO -->
+        <video
+          class="terminal-video"
+          src="assets/video/v1.mp4"
+          autoplay
+          muted
+          loop
+          playsinline>
+        </video>
+
+      </div>
     </div>
+
   </div>
 </section>
 
-<section class="spacer"></section>
-
 <section class="about">
-  <h2>About Me</h2>
-  <p>
-    I’m a Full-Stack Web Developer with hands-on experience building real-world
-    applications using a variety of frontend and backend technologies. I’ve
-    worked with frameworks such as Angular, Vue.js, and React on the frontend,
-    and PHP, Laravel, and .NET on the backend, with a strong interest in UX and
-    building systems that scale as products grow.
-  </p>
+  <div class="about-container">
+    <h2>About Me</h2>
+    <p>
+      I'm a Full-Stack Web Developer with hands-on experience using Angular,
+      Vue.js, React, PHP, Laravel, and .NET, with a strong interest in UX and
+      scalable system design.
+    </p>
+  </div>
 </section>

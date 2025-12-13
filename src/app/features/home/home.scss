@@ -31,29 +31,59 @@
   color: #334155;
 }
 
-/* Buttons */
+/* Actions */
 .actions {
   margin-top: 2rem;
   display: flex;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
+/* Base button */
 .btn {
   padding: 0.75rem 1.75rem;
-  border-radius: 6px;
-  font-weight: 500;
+  border-radius: 8px;
+  font-weight: 600;
   text-decoration: none;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
 }
 
-.btn.primary {
+/* Primary — main action */
+.btn-primary {
   background: var(--primary-accent);
-  color: white;
+  color: #ffffff;
+  box-shadow: 0 6px 16px rgba(242, 145, 32, 0.35);
 }
 
-.btn.secondary {
-  border: 2px solid var(--primary-dark);
+.btn-primary:hover {
+  background: #e07f10;
+  transform: translateY(-2px);
+}
+
+/* Secondary — neutral navigation */
+.btn-secondary {
+  background: var(--primary-dark);
+  color: #ffffff;
+}
+
+.btn-secondary:hover {
+  background: #16263f;
+  transform: translateY(-2px);
+}
+
+/* Outline — CV */
+.btn-outline {
+  background: transparent;
   color: var(--primary-dark);
+  border: 2px solid var(--primary-dark);
+}
+
+.btn-outline:hover {
+  background: var(--primary-dark);
+  color: #ffffff;
 }
 
 /* Photo */
@@ -71,7 +101,7 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
-/* Spacer before About */
+/* Spacer */
 .spacer {
   height: 4rem;
 }
@@ -111,7 +141,6 @@
 
   .actions {
     justify-content: center;
-    flex-wrap: wrap;
   }
 
   .hero-photo img {
